@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Login from "./screens/Login";
+import jwt_decode from 'jwt-decode'
+import Home from "./screens/Home";
 
-function App() {
+const App = () => {
+  
+  const accessToken = localStorage.getItem('accessToken')
+  const accessTokencheck = !localStorage.getItem('accessToken')
+
+  const currenttime = new Date()
+  const tokenget =  () =>{
+    if(!accessTokencheck === true){
+      let decodedToken =  jwt_decode(accessToken, {complete: true})
+       if(decodedToken.exp * 1000 < currenttime.getTime()){
+         return false
+       }
+       else{
+        return true
+       }
+      
+    }
+    
+  }
+  
+  
+  console.log(currenttime.getTime(), tokenget(), 'i am decoded')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+         
+         {
+           console.log(accessTokencheck,  tokenget(), 'i am from coding'),
+          accessTokencheck === true && tokenget() === undefined || tokenget() === false ?
+        <Login /> : <Home validToken={accessToken} />}
     </div>
   );
 }

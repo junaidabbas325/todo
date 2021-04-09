@@ -1,0 +1,88 @@
+.contain{
+    width: 90%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 6px;
+    margin-top: 50px;
+    height: 60px;
+}
+.blogHeadingInner h1{
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+.statusIcon{
+    display: flex;
+    align-items: center;
+    font-size: .8em;
+    
+    
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+.blogHeadingInner{
+    width: 70%;
+    float: left;
+    line-height: 40px;  
+}
+.blogHeadingInner .descriptionData{
+    margin-top: -10px; 
+    font-size: 1.6em;   
+}
+
+.speacialBtn{
+    float: right;
+    line-height: 40px;
+}
+.speacialBtn button{
+    width: 70px;
+    height: 40px;
+    font-size: 1em;
+    border: none;
+    line-height: 40%;
+    margin: 2px;
+}
+.speacialBtnDelete{
+    background-color: rgb(235, 84, 84);
+    color: white;
+}
+.speacialBtnDelete:hover{
+    background-color: rgb(199, 40, 40);
+    color: white;
+}
+.speacialBtnEdit:hover{
+    background-color: rgb(122, 122, 122);
+    color: white;
+}
+.speacialBtnEdit{
+    background-color: rgb(158, 158, 158);
+    color: white;
+}
+@media (max-width: 630px) {
+    .blogHeadingInner{
+        width: 100%;
+        float: none; 
+    }
+    .blogHeadingInner .descriptionData{
+        font-size: 1em;   
+    }
+    .blogHeadingInner{
+        width: 90%;
+        float: none; 
+    }
+    
+}
+@media (max-width: 460px) {
+    .speacialBtn{
+        float: none;
+        line-height: 40px;
+    }
+}

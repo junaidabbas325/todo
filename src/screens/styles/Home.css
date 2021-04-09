@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    width: 100vw;
+    background-color: rgb(218, 224, 255);
+}
+button:hover{
+    background-color: rgb(227, 228, 230);
+    transition: .3s ;
+    cursor: pointer;
+}
+nav{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(52, 50, 124);
+    padding: 0px 20px 0px 20px;
+}
+nav > h1 {
+    float: left;
+    line-height: 40px;
+    color: white;
+}
+nav > .logoutBtn {
+    line-height: 40px;
+    float: right;
+}
+.loading{
+    text-align: center;
+    margin-top: 60px;
+    font-weight: 400;
+}
+nav > .logoutBtn button {
+    width: 90px;
+    height: 30px;
+    border: none; 
+}
+nav > .logoutBtn .createPostBtn{
+    background-color: rgb(96, 185, 96);
+    color: white;
+    margin-right: 5px;
+}
+nav > .logoutBtn .createPostBtn:hover{
+    background-color: rgb(64, 146, 64);
+    color: white;
+    
+}
+.headerText{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+.searchBox{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.searchBox input{
+    width: 400px;
+    height: 40px;
+    font-size: 1em;
+    padding-left: 10px;
+    border: none;
+    line-height: 40%;
+    font-weight: 300;
+}
+.searchBox button{
+    width: 70px;
+    height: 40px;
+    font-size: 1em;
+    border: none;
+    line-height: 40%;
+}
+.FormBtn{
+    width: 100%;
+    text-align: center;
+}
+.FormBtn button{
+    width: 190px;
+    height: 40px;
+    border: none; 
+    margin-top: 40px;    
+}
+.FormBtn .Cancel{
+    margin-right: 10px; 
+    background-color: rgb(189, 189, 189);   
+}
+.FormBtn .Cancel:hover{
+    background-color: rgb(189, 189, 189);   
+}
+.FormBtn .Create{
+    background-color: rgb(96, 185, 96);
+    color: white;
+}
+.FormBtn .Create:hover{
+    background-color: rgb(64, 146, 64);
+    color: white;
+}
+.blogSpace{
+    height: 80px;
+}
