@@ -13,7 +13,7 @@ const Home =  (props) => {
     const username = jwt_decode(validToken, {complete: true})
     const logOut = () => {
         localStorage.setItem('accessToken', '')
-        window.location = "https://stacktodo.herokuapp.com/"
+        window.location = 'https://stacktodo.herokuapp.com/'
     }
     const [task, setTask] = useState([])
     const [refetch, setRefetch] = useState(false)
