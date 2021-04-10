@@ -13,11 +13,9 @@ const EditPost = (props) => {
     const validToken = props.validToken
     const routeProps = props.routeProps
     const id = routeProps.match.params.id
-    console.log(routeProps, 'from edi')
 
     useEffect(async ()  => {        
          const  fetchData  = await axiosInstance.get(`tasks/${id}`).then(res =>{
-            console.log(res)
             setInputTitle(res.data.title)  
             setInputDesc(res.data.description)  
             setInputStatus(res.data.status)  
@@ -42,7 +40,6 @@ const EditPost = (props) => {
             status: inputStatus
         })
     }, [inputTitle, inputDesc, inputStatus])
-    console.log(formData, 'formData')
     return(
         <>
         <form onSubmit={(e)=>FormSubmit(e)}>

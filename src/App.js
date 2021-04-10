@@ -24,12 +24,10 @@ const App = () => {
   }
   
   
-  console.log(currenttime.getTime(), tokenget(), 'i am decoded')
   return (
     <div className="App">
          
          {
-           console.log(accessTokencheck,  tokenget(), 'i am from coding'),
           accessTokencheck === true && tokenget() === undefined || tokenget() === false ?
         <Login /> : <Home validToken={accessToken} />}
     </div>

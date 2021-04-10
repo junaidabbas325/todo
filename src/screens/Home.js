@@ -67,7 +67,6 @@ const Home =  (props) => {
     //Search function
     const searchFunc = async (e)=>{        
          const  searchfetchData  = await axiosInstance.get(`tasks?search=${e}`).then(res =>{
-            console.log(res)
             setTask(res.data)    
             return res.data        
           })

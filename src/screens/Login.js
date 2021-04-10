@@ -25,14 +25,12 @@ export default function Login(){
     
     await axiosInstance.post('auth/signup', signInfo)
     .then(res =>{
-      console.log(res, 'hi i am response')
       if(res.status === 201){
         setSignValue(!signValue) 
         setUserSetInput('')
         setPassSetInput('')       
       }
       else{
-        console.log('sorry its not working')
       }
     })
   }
@@ -44,7 +42,6 @@ export default function Login(){
     
     await axiosInstance.post('auth/signin', signInfo)
     .then(res =>{
-      console.log(res, 'hi i am response')
       if(res.status === 201){
         setUserSetInput('')
         setPassSetInput('') 
@@ -53,7 +50,6 @@ export default function Login(){
         window.location = process.env.SERVERURL
       }
       else{
-        console.log('sorry its not working')
       }
     })
   }
