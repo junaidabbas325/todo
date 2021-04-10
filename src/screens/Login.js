@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
-import axios from 'axios';
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { axiosInstance } from '../API/authorizationBearer';
 
 export default function Login(){
@@ -47,7 +46,7 @@ export default function Login(){
         setPassSetInput('') 
         localStorage.setItem('accessToken', res.data.accessToken) 
               
-        window.location = process.env.SERVERURL
+        window.location = 'https://stacktodo.herokuapp.com/'
       }
       else{
       }
