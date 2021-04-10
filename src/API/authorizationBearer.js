@@ -3,7 +3,7 @@ import axios from "axios"
 const validToken = localStorage.getItem('accessToken')
 
 export const axiosInstance = axios.create({
-    baseURL: 'http://192.168.0.105:3100/',
+    baseURL: 'https://stacktodo.herokuapp.com/',
     headers: {
         'Authorization': 'Bearer ' + validToken
     }
